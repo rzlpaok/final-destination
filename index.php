@@ -12,12 +12,14 @@
     require_once $controller . 'Auth/LoginController.php';
     require_once $controller . 'Home/HomeController.php';
     require_once $controller . 'Dashboard/DashboardController.php';
+    require_once $controller . 'Dashboard/ConsoleController.php';
 
     // INISIALISASI CONTROLLERNYA
     $RegisterController = new RegisterController();
     $LoginController = new LoginController();
     $HomeController = new HomeController();
     $DashboardController = new DashboardController();
+    $ConsoleController = new ConsoleController();
 
     switch ($url) {
         // REGISTER
@@ -50,6 +52,18 @@
             $DashboardController->Index();
             break;
         // ROLE ADMIN (HALAMAN CONSOLE)
+        case 'admin/console':
+            $ConsoleController->Index();
+            break;
+        case 'admin/console/add':
+            $ConsoleController->CreateConsole();
+            break;
+        case 'admin/console/update':
+            $ConsoleController->UpdateConsole();
+            break;
+        case 'admin/console/delete':
+            $ConsoleController->DeleteConsole();
+            break;
         // ROLE ADMIN (HALAMAN PESANAN)
         // ROLE ADMIN (HALAMAN PELANGGAN)
 

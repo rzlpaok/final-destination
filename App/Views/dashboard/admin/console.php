@@ -15,17 +15,6 @@
 
     <!-- Desktop Table -->
     <div class="hidden md:block border rounded-lg bg-white">
-        <?php if (isset($model['alert'])): ?>
-            <div class="bg-red-500 text-lg text-white p-2 rounded">
-                <?= htmlspecialchars($model['alert']) ?>
-            </div>
-            <?php unset($_SESSION['alert']); ?>
-        <?php elseif (isset($model['success'])): ?>
-            <div class="bg-green-500 text-lg text-white p-2 rounded">
-                <?= htmlspecialchars($model['success']) ?>
-            </div>
-            <?php unset($_SESSION['success']); ?>
-        <?php endif; ?>
         <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
@@ -42,7 +31,8 @@
                         <td class="px-6 py-4 font-medium text-gray-900"><?= $item['nameConsole'] ?></td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-2">
-                                <button data-modal-target="update-modal-<?= $item['id'] ?>" data-modal-toggle="update-modal-<?= $item['id'] ?>"
+                                <button data-modal-target="update-modal-<?= $item['id'] ?>"
+                                    data-modal-toggle="update-modal-<?= $item['id'] ?>"
                                     class="p-2 text-gray-500 hover:bg-gray-100 rounded-full">
                                     <i data-lucide="edit" class="w-4 h-4"></i>
                                     <span class="sr-only">Edit</span>
@@ -71,7 +61,8 @@
                         <?= $item['nameConsole'] ?>
                     </p>
                     <div class="flex gap-2">
-                        <button data-modal-target="update-modal-<?= $item['id'] ?>" data-modal-toggle="update-modal-<?= $item['id'] ?>"
+                        <button data-modal-target="update-modal-<?= $item['id'] ?>"
+                            data-modal-toggle="update-modal-<?= $item['id'] ?>"
                             class="p-2 text-gray-500 hover:bg-gray-100 rounded-full">
                             <i data-lucide="edit" class="w-4 h-4"></i>
                             <span class="sr-only">Edit</span>
@@ -89,8 +80,7 @@
     </div>
 
     <!-- Console Form Modal (Add) -->
-    <div id="console-modal" tabindex="-1"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1实际情况
+    <div id="console-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1实际情况
         <div class=" relative p-4 w-full max-w-md max-h-full">
         <div class="relative bg-white rounded-lg shadow">
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
@@ -107,7 +97,7 @@
                 </button>
             </div>
             <div class="p-4 md:p-5">
-                <form action="/dashboard/console/add" method="POST" class="space-y-4">
+                <form action="/admin/console/add" method="POST" class="space-y-4">
                     <div>
                         <label for="console-name" class="block mb-2 text-sm font-medium text-gray-900">Nama
                             Konsol</label>
@@ -143,16 +133,20 @@
                         </button>
                     </div>
                     <div class="p-4 md:p-5">
-                        <form action="/dashboard/console/update" method="POST" class="space-y-4">
+                        <form action="/admin/console/update" method="POST" class="space-y-4">
                             <input type="hidden" name="id" value="<?= $item['id'] ?>">
                             <div>
-                                <label for="console-name-<?= $item['id'] ?>" class="block mb-2 text-sm font-medium text-gray-900">Nama Konsol</label>
+                                <!-- input ID hidden tidak terlihat -->
+                                <input type="hidden" name="id" value="<?= $item['id'] ?>" disabled>
+                                <label for="console-name-<?= $item['id'] ?>"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Nama Konsol</label>
                                 <input name="nameConsole" type="text" id="console-name-<?= $item['id'] ?>"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#29ABE2] focus:border-[#29ABE2] block w-full p-2.5"
                                     value="<?= htmlspecialchars($item['nameConsole']) ?>" required />
                             </div>
                             <button name="updateConsole" type="submit"
-                                class="w-full text-white bg-[#29ABE2] hover:bg-[#1a8ac5] focus:ring-4 focus:outline-none focus:ring-[#29ABE2] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Simpan Perubahan</button>
+                                class="w-full text-white bg-[#29ABE2] hover:bg-[#1a8ac5] focus:ring-4 focus:outline-none focus:ring-[#29ABE2] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Simpan
+                                Perubahan</button>
                         </form>
                     </div>
                 </div>
@@ -177,9 +171,9 @@
                                 class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">
                                 Batal
                             </button>
-                            <form method="POST" action="/dashboard/console/delete" class="inline">
+                            <form method="POST" action="/admin/console/delete" class="inline">
                                 <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                                <button type="submit" data-modal-hide="delete-modal-1-<?= $item['id'] ?>"
+                                <button name="deleteConsole" type="submit" data-modal-hide="delete-modal-1-<?= $item['id'] ?>"
                                     class="px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg">
                                     Hapus
                                 </button>

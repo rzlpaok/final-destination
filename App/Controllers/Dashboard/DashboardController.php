@@ -12,7 +12,7 @@ class DashboardController
     public function Index()
     {
         $model = [
-            'title' => "RentGO - Admin Dashboard",
+            'title' => "RentGO - Admin Console",
             'photo' => $_SESSION['photo'],
             'username' => $_SESSION['username'],
             'email' => $_SESSION['email'],
@@ -30,8 +30,8 @@ class DashboardController
         unset($_SESSION['alert'], $_SESSION['success']);
     }
 
+    
 
-//123asx2e1c23c1wdd1d1ccccccc
 
 
 

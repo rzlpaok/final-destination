@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 
     $dataJson = __DIR__ . "/../../database/console.json";
 

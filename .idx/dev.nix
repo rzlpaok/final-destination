@@ -27,21 +27,9 @@
       "shufo.vscode-blade-formatter"
       "yandeu.five-server"
     ];
-    previews = {
-      enable = true;
-      previews = {
-        web = {
-          command = ["php" "-S" "localhost:9002"];
-          manager = "web";
-        };
-      };
-    };
     workspace = {
       onCreate = {
-        default.openFiles = ["index.php"];
-      };
-      onStart = {
-        run-server = "php -S localhost:8080";
+       default.openFiles = ["index.php"];
       };
     };
   };

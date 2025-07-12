@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $model['title'] ?> </title>
+    <title><?= $model['title']?></title>
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite CDN -->
@@ -31,13 +31,13 @@
                 <!-- Sidebar Content (Simulated) -->
                 <ul class="space-y-2 font-medium">
                     <li>
-                        <a href="/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-primary hover:text-white group">
+                        <a href="/admin/dashboard" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-primary hover:text-white group">
                             <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                             <span class="ml-3">Dasbor</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/console" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-primary hover:text-white group">
+                        <a href="/admin/console" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-primary hover:text-white group">
                             <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                             <span class="ml-3">console</span>
                         </a>

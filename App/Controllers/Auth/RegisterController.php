@@ -45,17 +45,14 @@
                 }
 
                 // Cek Email dan Username Duplikat
-                $alert = "";
                 $status = false;
                 foreach ($data as $item) {
                     if ($email === $item['email']) {
-                        $alert = "Email sudah terdaftar";
-                        $_SESSION['alert'] = $alert;
+                        $_SESSION['alert'] = "Email sudah terdaftar";
                         $status = true;
                         break;
                     } else if($username === $item['username']) {
-                        $alert = "Username sudah terdaftar";
-                        $_SESSION['alert'] = $alert;
+                        $_SESSION['alert'] = "Username sudah terdaftar";
                         $status = true;
                     }
                 }

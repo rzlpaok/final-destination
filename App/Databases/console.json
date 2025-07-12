@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": 1,
+        "nameConsole": "PS Vita"
+    },
+    {
+        "id": 2,
+        "nameConsole": "PS 5"
+    },
+    {
+        "id": 3,
+        "nameConsole": "PS 6"
+    }
+]
