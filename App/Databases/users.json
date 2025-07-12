@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "photo": "file-upload\/1.jpg",
+        "username": "rizal",
+        "email": "admin@gmail.com",
+        "password": "$2y$10$kFFpoIL\/aYM32IAjeKNW\/eCiUZbivzPtgqQ9byjD\/CaOFq844RA8K",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "photo": "file-upload\/chandra_306.png",
+        "username": "chandra",
+        "email": "chandra@gmail.com",
+        "password": "$2y$10$D2e7y5j4gGiJyC\/qS9VDE.wkiTaaXEHtDi7beC9GtYSG9geM1D6W.",
+        "role": "member"
+    },
+    {
+        "id": 3,
+        "photo": "file-upload\/lalala_449.png",
+        "username": "lalala",
+        "email": "tio@gmail.com",
+        "password": "$2y$10$QSEXIDjts2L7AXtxbCTcHeKSBxJJQcjM8P20OBS6A.Ndas.NoMEAi",
+        "role": "member"
+    },
+    {
+        "id": 4,
+        "photo": "file-upload\/redmi10_361.jpeg",
+        "username": "redmi10",
+        "email": "redmi10@gmail.com",
+        "password": "$2y$10$u1RUOOppqwO\/DSXXkRYI2.lBdXbrBLRROYWLujKACMk9TXCzrbQBe",
+        "role": "member"
+    }
+]
